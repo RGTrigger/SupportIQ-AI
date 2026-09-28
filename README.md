@@ -15,6 +15,10 @@
   <img src="https://img.shields.io/badge/SQLite-Database-003B57?style=flat-square&logo=sqlite&logoColor=white">
 </p>
 
+### 🚀 Live Demo
+
+**[Open SupportIQ AI →](https://supportiq-ai.streamlit.app)**
+
 </div>
 
 ---
