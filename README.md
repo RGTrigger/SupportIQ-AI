@@ -400,7 +400,7 @@ SUPPORTIQ_DB_PATH=data/supportiq.sqlite3
 SUPPORTIQ_VECTOR_PATH=data/chroma
 SUPPORTIQ_EMBEDDING_MODEL=all-MiniLM-L6-v2
 
-SUPPORTIQ_GITHUB_REPO=
+SUPPORTIQ_GITHUB_REPO=https://github.com/RGTrigger/SupportIQ-AI
 
 EMAIL_PROVIDER=demo
 SMS_PROVIDER=demo
@@ -467,7 +467,7 @@ Example Streamlit secrets:
 GROQ_API_KEY = "YOUR_GROQ_API_KEY"
 LLM_MODEL = "openai/gpt-oss-20b"
 SUPPORTIQ_MODE = "demo"
-SUPPORTIQ_GITHUB_REPO = "https://github.com/YOUR_USERNAME/SupportIQ_AI"
+SUPPORTIQ_GITHUB_REPO = "https://github.com/RGTrigger/SupportIQ-AI"
 ```
 
 SMTP/Twilio settings should only be added when live provider integrations are intentionally configured.

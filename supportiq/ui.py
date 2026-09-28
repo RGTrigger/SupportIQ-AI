@@ -4,7 +4,6 @@ import io
 import json
 import base64
 import html
-import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -43,7 +42,7 @@ def _pill(text: str) -> str:
     return f'<span style="display:inline-block;background:{color};padding:4px 10px;border-radius:99px;font-size:12px;font-weight:650;color:#253148">{html.escape(str(text))}</span>'
 
 def _footer():
-    project_repo=os.getenv("SUPPORTIQ_GITHUB_REPO","").strip().rstrip("/")
+    project_repo=(settings.github_repo or "").strip().rstrip("/")
     with st.container(key="global_footer"):
         with st.container(key="footer-columns"):
             app,quick,connect,support=st.columns([2.1,1.05,1.1,1.25],gap="medium")

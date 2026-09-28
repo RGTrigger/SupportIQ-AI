@@ -18,6 +18,7 @@ class Settings:
     mode: str
     groq_api_key: str | None = field(repr=False)
     llm_model: str
+    github_repo: str | None = None
     email_provider: str = "demo"
     email_from: str | None = None
     smtp_host: str | None = None
@@ -63,6 +64,7 @@ def get_settings() -> Settings:
         mode=str(env("SUPPORTIQ_MODE", "demo")).strip().lower(),
         groq_api_key=env("GROQ_API_KEY"),
         llm_model=env("LLM_MODEL","openai/gpt-oss-20b"),
+        github_repo=env("SUPPORTIQ_GITHUB_REPO"),
         email_provider=str(env("EMAIL_PROVIDER","demo")).lower(),
         email_from=env("EMAIL_FROM"),
         smtp_host=env("SMTP_HOST"),
