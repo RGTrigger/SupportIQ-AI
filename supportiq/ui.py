@@ -53,7 +53,6 @@ def _footer(settings: Settings):
                 st.markdown("**Quick Links**")
                 st.button("♙  About Creator",key="footer_about",on_click=_navigate_to_creator,width="stretch")
                 st.button("▢  Give Feedback",key="footer_feedback",on_click=_navigate_to_feedback,width="stretch")
-                if project_repo: st.link_button("⌘  GitHub Repository",project_repo,width="stretch")
                 st.button("▧  Documentation",key="footer_docs",on_click=_navigate_to_page,args=("Knowledge Base",),width="stretch")
                 st.link_button("⚑  Report Issue","mailto:rgtrigger.ai.dev@gmail.com?subject=SupportIQ%20AI%20Issue",width="stretch")
             with connect:
