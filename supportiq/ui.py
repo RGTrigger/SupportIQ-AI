@@ -41,7 +41,7 @@ def _pill(text: str) -> str:
     color=styles.get(text,"#eef2ff")
     return f'<span style="display:inline-block;background:{color};padding:4px 10px;border-radius:99px;font-size:12px;font-weight:650;color:#253148">{html.escape(str(text))}</span>'
 
-def _footer():
+def _footer(settings: Settings):
     project_repo=(settings.github_repo or "").strip().rstrip("/")
     with st.container(key="global_footer"):
         with st.container(key="footer-columns"):
@@ -963,7 +963,7 @@ def render_app(settings: Settings):
                     st.button("Give Feedback",key="top_give_feedback",on_click=_navigate_to_feedback,width="stretch")
     renderers={"Dashboard":_dashboard,"Inbox":_inbox,"Tickets":_tickets,"Ticket Workspace":_workspace,"Customers":_customers,"Conversations":_conversations,"AI Analysis":_analysis,"Knowledge Base":_knowledge,"Analytics":_analytics,"AI Quality":_quality,"Bulk Analysis":_bulk,"Daily Brief":_brief,"Settings":_settings,"MCP Tools":_mcp,"About / Creator":_creator_gate,"Feedback & Review":_feedback}
     renderers[st.session_state.page_nav](settings)
-    _footer()
+    _footer(settings)
 
 def _search_tickets():
     st.session_state.page_nav="Tickets"
